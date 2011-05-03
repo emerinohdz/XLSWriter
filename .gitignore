@@ -1,0 +1,6 @@
+# Ignore build directory
+build
+dist
+PyDevpower_Utilities.egg-info
+
+*.pyc
