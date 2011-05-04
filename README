@@ -1,0 +1,6 @@
+This module uses the libraries xlrd, xlwt and xlutils
+from http://www.python-excel.org in order to handle
+XLS files in an easy way.
+
+It provides the class XLSWriter which is able to 
+ 
