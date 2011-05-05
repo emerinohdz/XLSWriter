@@ -17,6 +17,10 @@
 # DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+__version__ = "0.1"
+__author__ = "emerino <emerino at gmail dot com>"
+
+
 from xlwt import Workbook
 from xlrd import open_workbook
 from xlutils.copy import copy
