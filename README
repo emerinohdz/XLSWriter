@@ -2,5 +2,37 @@ This module uses the libraries xlrd, xlwt and xlutils
 from http://www.python-excel.org in order to handle
 XLS files in an easy way.
 
-It provides the class XLSWriter which is able to 
+It provides the class XLSWriter which is able to either
+modify an existing xls file or create a new one from
+scratch or based on another one.
+
+
+Example:
+
+from devpower.xls import XLSWriter
+ 
+# create a new XLS file
+writer = XLSWriter()
+writer.append(["Col1", "Col2", "Col3"])
+writer.save("test.xls")
+ 
+# modify an existing XLS file
+writer = XLSWriter("archivo.xls")
+
+# add a row at the end of the document
+writer.append(["Col1", "Col2", "Col3"])
+
+# search for the string "VALUE" in the first column
+# and replace the row with the data given in the list
+writer.replace(0, "VALOR", ["Col1", "Col2", "Col3"])
+
+# write data at row 5 (index 4)
+writer.write(4, ["Col1", "Col2", "Col3"])
+
+# save changes to file
+writer.save()
+
+# or save them to a new one
+writer.save("new.xls")
+
  
